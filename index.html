@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om Ji Mishra | Robotics & Automation Expert</title>
+  <meta name="description" content="Portfolio and 6-Stage Robotics Engineering Architecture by Om Ji Mishra." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#080d1a',
+              card: '#0f172a',
+              border: '#1e293b',
+              accent: '#38bdf8',
+              orange: '#f97316',
+              amber: '#f59e0b'
+            }
+          },
+          fontFamily: {
+            sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      background-color: #080d1a;
+      color: #e2e8f0;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .grid-pattern {
+      background-size: 36px 36px;
+      background-image: 
+        linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+    }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card:hover {
+      border-color: rgba(56, 189, 248, 0.35);
+    }
+  </style>
+</head>
+<body class="grid-pattern min-h-screen flex flex-col antialiased selection:bg-sky-500 selection:text-black">
+
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-50 bg-[#080d1a]/85 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVIpPTPTUHPQKv_rqvWpbkcJ1oJXmLGtQ4-JYko9s5YgfzBWFudNl-jq-B7IeUlyNoc-5O1V9ITuUKEdRP-yKjfl9Dbu8iSKDxems-fL64Sxkk23R6-kCL2BaXB2BmQ8AW9xd2dD1cD5xABn1YmjjZJPSDWK81cEBnItfVjdb7p_gmPX45hB61qNYhzjbb947hjYoxLLRVd-n1ovMBu1PM3Xio-Bm-ZYOdAVhrB3NBXNkcCif2NHk7N3wwCsBHhb5m84I" alt="INNOV8IVE" class="h-10 w-auto rounded object-contain" />
+        <div class="flex flex-col">
+          <span class="text-lg font-bold tracking-tight text-white group-hover:text-sky-400 transition-colors flex items-center gap-2">
+            INNOV8IVE
+          </span>
+          <span class="text-[10px] font-mono tracking-widest text-orange-400 font-bold uppercase">BUILD IT</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-mono text-slate-400">
+        <a href="#learning-path" class="hover:text-sky-400 transition-colors">Pathways</a>
+        <a href="#experience" class="hover:text-sky-400 transition-colors">Experience</a>
+        <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-sky-400 transition-colors">Skills & Gear</a>
+        <a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <a href="#contact" onclick="openCVModal()" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs font-mono font-bold tracking-wider transition-all shadow-lg shadow-sky-500/20 active:scale-95">
+          <i data-lucide="file-down" class="w-4 h-4"></i>
+          <span>DOWNLOAD CV</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="py-14 sm:py-20 border-b border-slate-800/80 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Hero Copy -->
+      <div class="lg:col-span-7 flex flex-col gap-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs font-mono w-fit">
+          <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
+          <span>ROBOTICS & EMBEDDED SYSTEMS ARCHITECTURE</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+          From Curiosity to <br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-300 to-orange-400">
+            Real-World Innovation
+          </span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+          A rigorous 6-stage engineering pathway empowering young minds to master hands-on electronics, embedded firmware, ROS 2, real-time kinematics, and autonomous AI systems.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#learning-path" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-mono font-bold text-sm transition-all shadow-lg shadow-sky-500/25 active:scale-95">
+            <span>Explore 6-Stage Pathway</span>
+            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+          </a>
+          <button onclick="openCVModal()" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-slate-900/90 hover:bg-slate-800 text-white border border-slate-700 font-mono text-sm transition-all hover:border-orange-400 active:scale-95">
+            <i data-lucide="download" class="w-4 h-4 text-orange-400"></i>
+            <span>Download CV & Syllabus</span>
+          </button>
+        </div>
+
+        <!-- Stat Counters Strip -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-slate-800/80 mt-2">
+          <div>
+            <div class="text-3xl font-bold text-sky-400 font-mono">3+ Years</div>
+            <div class="text-xs text-slate-400 font-mono uppercase mt-1">into Robotics</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-orange-400 font-mono">2,000+</div>
+            <div class="text-xs text-slate-400 font-mono uppercase mt-1">Students Trained</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-white font-mono">3,000+</div>
+            <div class="text-xs text-slate-400 font-mono uppercase mt-1">Projects Guided</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-sky-400 font-mono">12+</div>
+            <div class="text-xs text-slate-400 font-mono uppercase mt-1">Clients (UP & BLR)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Profile Card -->
+      <div class="lg:col-span-5 relative">
+        <div class="absolute -inset-1.5 bg-gradient-to-r from-sky-500/20 to-orange-500/20 rounded-2xl blur-xl opacity-75"></div>
+        <div class="relative glass-card rounded-2xl p-4 border border-slate-700/60 shadow-2xl">
+          <div class="relative aspect-square rounded-xl overflow-hidden bg-slate-950 border border-slate-700/40">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRfogsQFVXwRbBfdviu4rW43WJl8CrK_HuL4HfJl4wzaG5AN8j2ZxDOgdoTIIECyQeylrP-v4Kn0kppKzgzoubnrn2OzMyrkvqvV7r8IahcnO0LpLOzymSrx5QT19ObrClwv7OC0bJ0tnk0fQv5jtSllcpaHmOHr5PSUmIpnw8BftThSeatiaT_mNpD4vZfc6Bpk4k5MX205M0yua7mRIW4SPQ3Ok5McaOVAPHyMLlRHUGo3gtbOn-aQ5MnrLxMH2V9v8" alt="Om Ji Mishra" class="w-full h-full object-cover object-top" />
+            <div class="absolute top-3 right-3 px-3 py-1 rounded bg-slate-950/80 backdrop-blur-md border border-sky-400/40 text-[11px] font-mono text-sky-400 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>ROS 2 / HIL BENCH</span>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 p-3 rounded-lg bg-slate-950/85 backdrop-blur-md border border-slate-700/60 flex items-center justify-between">
+              <div>
+                <h3 class="text-white font-bold text-base">Om Ji Mishra</h3>
+                <p class="text-xs text-sky-400 font-mono">Robotics & Automation Expert</p>
+              </div>
+              <span class="px-2.5 py-1 rounded bg-slate-900 text-orange-400 border border-orange-500/30 text-xs font-mono font-semibold">Mentor & Lead</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 6-STAGE LEARNING PATHWAY ================= -->
+  <section id="learning-path" class="py-20 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+        <div>
+          <span class="text-xs font-mono text-orange-400 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="git-branch" class="w-4 h-4"></i> CURRICULUM ARCHITECTURE
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">The 6-Stage Learning Pathway</h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">
+            A comprehensive pipeline bridging foundational mechanics with embedded systems, ROS 2 robotics, and autonomous systems.
+          </p>
+        </div>
+      </div>
+
+      <!-- 6 Stages Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Stage 1 -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="px-2.5 py-1 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20 font-bold">STAGE 01</span>
+              <span class="text-orange-400">Ages 9–11</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Explorer</h3>
+            <p class="text-slate-400 text-sm mb-4">Demystify hardware through tangible play, sensory discovery, and simple algorithmic cause-and-effect.</p>
+            <ul class="text-xs text-slate-300 font-mono space-y-1.5 border-t border-slate-800 pt-3">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> DC Circuits & LED Logic</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Block-based flow control</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Obstacle Avoidance Buggy</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Stage 2 -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="px-2.5 py-1 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20 font-bold">STAGE 02</span>
+              <span class="text-orange-400">Ages 11–14</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Builder</h3>
+            <p class="text-slate-400 text-sm mb-4">Bridge software logic with discrete circuit hardware, transitioning from block code to structured syntax.</p>
+            <ul class="text-xs text-slate-300 font-mono space-y-1.5 border-t border-slate-800 pt-3">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Arduino & C++ Syntax</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Transistors & Regulators</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> 4-DOF Robotic Arm</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Stage 3 -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="px-2.5 py-1 rounded bg-orange-500/10 text-orange-400 border border-orange-500/20 font-bold">STAGE 03</span>
+              <span class="text-orange-400">Ages 14–16</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Maker</h3>
+            <p class="text-slate-400 text-sm mb-4">Master custom printed circuit boards, parametric 3D fabrication, and real-time sensor fusion.</p>
+            <ul class="text-xs text-slate-300 font-mono space-y-1.5 border-t border-slate-800 pt-3">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-orange-400"></i> Fusion 360 & DFM Slicing</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-orange-400"></i> KiCad 2-Layer PCB Layout</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-orange-400"></i> Inverted Pendulum Self-Balancer</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Stage 4 -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="px-2.5 py-1 rounded bg-orange-500/10 text-orange-400 border border-orange-500/20 font-bold">STAGE 04</span>
+              <span class="text-orange-400">Ages 16–18</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Engineer</h3>
+            <p class="text-slate-400 text-sm mb-4">Engineer robust embedded architectures, deterministic communication protocols, and industrial mechanics.</p>
+            <ul class="text-xs text-slate-300 font-mono space-y-1.5 border-t border-slate-800 pt-3">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-orange-400"></i> STM32 ARM & FreeRTOS</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-orange-400"></i> CAN Bus & Industrial SPI</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-orange-400"></i> Custom Flight Controller Board</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Stage 5 -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="px-2.5 py-1 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20 font-bold">STAGE 05</span>
+              <span class="text-sky-400">Ages 18–21</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Technologist</h3>
+            <p class="text-slate-400 text-sm mb-4">Implement distributed autonomous systems using ROS 2, LiDAR SLAM, and edge neural processing.</p>
+            <ul class="text-xs text-slate-300 font-mono space-y-1.5 border-t border-slate-800 pt-3">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> ROS 2 Humble/Iron Nodes & Nav2</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> 2D/3D LiDAR SLAM & MoveIt 2</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Autonomous AMR & Jetson Orin</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Stage 6 -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="px-2.5 py-1 rounded bg-orange-500/10 text-orange-400 border border-orange-500/20 font-bold">STAGE 06</span>
+              <span class="text-orange-400">Ages 21–24</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Innovator</h3>
+            <p class="text-slate-400 text-sm mb-4">Transform bleeding-edge robotics research into venture-backed deep-tech hardware products and patentable IP.</p>
+            <ul class="text-xs text-slate-300 font-mono space-y-1.5 border-t border-slate-800 pt-3">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-orange-400"></i> Quadruped Dynamic Locomotion RL</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-orange-400"></i> CE/FCC Compliance & DFM</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-orange-400"></i> Commercial Deep-Tech Products</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTERACTIVE EXPERIENCE TIMELINE ================= -->
+  <section id="experience" class="py-20 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+        <div>
+          <span class="text-xs font-mono text-sky-400 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="briefcase" class="w-4 h-4"></i> CAREER & TRACK RECORD
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Experience Timeline</h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2">Filter and inspect roles across engineering, mentorship, and embedded product development.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap gap-2 p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono">
+          <button onclick="filterExperience('all')" id="exp-btn-all" class="exp-tab px-3 py-1.5 rounded bg-sky-500 text-slate-950 font-bold transition-all">All Roles</button>
+          <button onclick="filterExperience('robotics')" id="exp-btn-robotics" class="exp-tab px-3 py-1.5 rounded text-slate-400 hover:text-white transition-all">Robotics</button>
+          <button onclick="filterExperience('training')" id="exp-btn-training" class="exp-tab px-3 py-1.5 rounded text-slate-400 hover:text-white transition-all">Training & Mentorship</button>
+          <button onclick="filterExperience('embedded')" id="exp-btn-embedded" class="exp-tab px-3 py-1.5 rounded text-slate-400 hover:text-white transition-all">Embedded & AI</button>
+        </div>
+      </div>
+
+      <!-- Experience Cards Container -->
+      <div class="space-y-6" id="experience-list">
+        <!-- Role 1 -->
+        <div class="exp-card robotics glass-card rounded-xl p-6 border-l-4 border-l-sky-400 transition-all">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <div>
+              <h3 class="text-xl font-bold text-white">Senior Robotics Engineer & Curriculum Architect</h3>
+              <p class="text-sm font-mono text-sky-400">INNOV8IVE LABS • 2023 - Present</p>
+            </div>
+            <span class="self-start sm:self-auto px-3 py-1 rounded bg-sky-500/10 text-sky-400 font-mono text-xs border border-sky-500/20">Full-Time Lead</span>
+          </div>
+          <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+            Architected the multi-stage robotics syllabus, hardware testing rigs, and ROS 2 simulation environments. Deployed real-time autonomous mobile robots (AMR) and manipulator systems for educational institutions and research clients.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 border-t border-slate-800/80 font-mono text-xs text-slate-400">
+            <div><span class="text-sky-400 font-bold block">12+</span> Research Labs</div>
+            <div><span class="text-white font-bold block">ROS 2 Humble</span> Stack Lead</div>
+            <div><span class="text-orange-400 font-bold block">Nav2 / SLAM</span> Cartographer</div>
+            <div><span class="text-white font-bold block">Gazebo / MoveIt</span> Simulation</div>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="exp-card training glass-card rounded-xl p-6 border-l-4 border-l-orange-400 transition-all">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <div>
+              <h3 class="text-xl font-bold text-white">Head Robotics Trainer & Mentor</h3>
+              <p class="text-sm font-mono text-orange-400">STEM Academies & Institutional Hubs • 2022 - Present</p>
+            </div>
+            <span class="self-start sm:self-auto px-3 py-1 rounded bg-orange-500/10 text-orange-400 font-mono text-xs border border-orange-500/20">Mentorship</span>
+          </div>
+          <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+            Trained over 2,000+ students from school to engineering college levels. Mentored 3,000+ completed projects spanning IoT weather nodes, PictoBlox AI computer vision models, obstacle rovers, and drone avionics.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 border-t border-slate-800/80 font-mono text-xs text-slate-400">
+            <div><span class="text-orange-400 font-bold block">2,000+</span> Students Mentored</div>
+            <div><span class="text-white font-bold block">100%</span> Hands-On Hardware</div>
+            <div><span class="text-sky-400 font-bold block">3,000+</span> Guided Projects</div>
+            <div><span class="text-white font-bold block">UP & Bengaluru</span> Chapters</div>
+          </div>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="exp-card embedded glass-card rounded-xl p-6 border-l-4 border-l-purple-400 transition-all">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <div>
+              <h3 class="text-xl font-bold text-white">Embedded Systems & Firmware Specialist</h3>
+              <p class="text-sm font-mono text-purple-400">Contract & Industrial R&D • 2021 - 2023</p>
+            </div>
+            <span class="self-start sm:self-auto px-3 py-1 rounded bg-purple-500/10 text-purple-400 font-mono text-xs border border-purple-500/20">Firmware & PCBs</span>
+          </div>
+          <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+            Engineered custom microcontroller breakout boards, ESP32 BLE/WiFi telemetry nodes, and FreeRTOS task schedules. Handled PCB routing in KiCad, component procurement, and automated testing jigs.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 border-t border-slate-800/80 font-mono text-xs text-slate-400">
+            <div><span class="text-purple-400 font-bold block">ESP32 & STM32</span> Multi-Cores</div>
+            <div><span class="text-white font-bold block">FreeRTOS</span> Multi-Tasking</div>
+            <div><span class="text-orange-400 font-bold block">KiCad</span> 2 & 4 Layer PCBs</div>
+            <div><span class="text-sky-400 font-bold block">UART / CAN / SPI</span> Protocols</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS GRID WITH MODAL ================= -->
+  <section id="projects" class="py-20 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+        <div>
+          <span class="text-xs font-mono text-orange-400 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="cpu" class="w-4 h-4"></i> HARDWARE & SOFTWARE PROOFS
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Featured Robotics Projects</h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2">Click any project to view complete schematic, code, and implementation details.</p>
+        </div>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all cursor-pointer" onclick="openProjectModal('esp32-serving')">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20 font-semibold">Robotics & IoT</span>
+              <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-sky-400 transition-colors"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-sky-400 transition-colors">ESP32 Autonomous Serving Robot</h3>
+            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+              Dual-core ESP32 differential drive platform with table-navigation state machine, ultrasonic safety sensors, and web-app food order dispatch.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5 font-mono text-[11px]">
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">ESP32</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">C++</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">WebSockets</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Motor Drivers</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all cursor-pointer" onclick="openProjectModal('ros2-amr')">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20 font-semibold">ROS 2 & SLAM</span>
+              <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-sky-400 transition-colors"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-sky-400 transition-colors">ROS 2 & Gazebo Autonomous AMR</h3>
+            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+              Industrial autonomous mobile robot simulated in Gazebo Ignition and verified on hardware using RPLiDAR A1, Nav2 costmaps, and Cartographer SLAM.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5 font-mono text-[11px]">
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">ROS 2 Humble</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Nav2</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">LiDAR SLAM</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Python</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all cursor-pointer" onclick="openProjectModal('pictoblox-ai')">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="px-2 py-0.5 rounded bg-orange-500/10 text-orange-400 border border-orange-500/20 font-semibold">AI & Vision</span>
+              <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-orange-400 transition-colors"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">PictoBlox AI & Computer Vision</h3>
+            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+              Real-time image classification and object tracking modules developed for school students, interfacing physical actuators with AI neural models.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5 font-mono text-[11px]">
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">PictoBlox</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">OpenCV</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">TensorFlow Lite</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Quarky</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all cursor-pointer" onclick="openProjectModal('flight-controller')">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20 font-semibold">Avionics & Embedded</span>
+              <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-sky-400 transition-colors"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-sky-400 transition-colors">STM32 Custom Drone Flight Controller</h3>
+            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+              Bare-metal STM32F4 PCB with MPU6050 complementary Kalman filter, BMP280 barometer, blackbox SPI flash, and 400Hz PWM ESC motor modulation.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5 font-mono text-[11px]">
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">STM32F4</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">KiCad</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">C Bare-Metal</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">PID</span>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all cursor-pointer" onclick="openProjectModal('bionic-hand')">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="px-2 py-0.5 rounded bg-orange-500/10 text-orange-400 border border-orange-500/20 font-semibold">Biomimetics & CAD</span>
+              <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-orange-400 transition-colors"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">3D-Printed Bionic Robotic Hand</h3>
+            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+              Parametric Fusion 360 articulated prosthetic hand driven by nylon tendons, micro servos, and wireless flex-sensor data glove tracking.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5 font-mono text-[11px]">
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Fusion 360</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">3D Printing</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Servos</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Kinematics</span>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all cursor-pointer" onclick="openProjectModal('iot-weather')">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20 font-semibold">Telemetry & Cloud</span>
+              <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-sky-400 transition-colors"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-sky-400 transition-colors">Solar IoT Weather Telemetry Station</h3>
+            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+              Autonomous remote station logging ambient pressure, humidity, UV index, and soil moisture via MQTT and low-power ESP32 sleep modes.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5 font-mono text-[11px]">
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">ESP32</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">MQTT</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Solar MPPT</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Dashboard</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS & GEAR SECTION ================= -->
+  <section id="skills" class="py-20 border-b border-slate-800/80 bg-slate-950/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-mono text-sky-400 uppercase tracking-wider">HARDWARE BENCH & STACK</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Skills & Technical Gear</h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">Tools, operating environments, and silicon architectures deployed across projects.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Category 1: Microcontrollers -->
+        <div class="glass-card rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="p-2 rounded-lg bg-sky-500/10 text-sky-400"><i data-lucide="cpu" class="w-5 h-5"></i></span>
+            <h3 class="text-lg font-bold text-white">Microcontrollers</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">ESP32 / ESP8266</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">STM32 Cortex-M</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">Arduino Uno/Mega</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">Raspberry Pi 4/5</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">Jetson Nano/Orin</span>
+          </div>
+        </div>
+
+        <!-- Category 2: Robotics & Middleware -->
+        <div class="glass-card rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="p-2 rounded-lg bg-orange-500/10 text-orange-400"><i data-lucide="bot" class="w-5 h-5"></i></span>
+            <h3 class="text-lg font-bold text-white">Robotics & Middleware</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">ROS 2 (Humble/Iron)</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">Nav2 Navigation</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">Gazebo Simulator</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">MoveIt 2 Manipulator</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">URDF & RViz</span>
+          </div>
+        </div>
+
+        <!-- Category 3: OS & Development Setup -->
+        <div class="glass-card rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400"><i data-lucide="terminal" class="w-5 h-5"></i></span>
+            <h3 class="text-lg font-bold text-white">OS & Dual-Boot Setup</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">Ubuntu 22.04 LTS (Native)</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">Windows 11 Dual-Boot</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">Bash & Shell Scripts</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">Git & GitHub</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">Docker Containers</span>
+          </div>
+        </div>
+
+        <!-- Category 4: CAD, PCB & Software -->
+        <div class="glass-card rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="p-2 rounded-lg bg-purple-500/10 text-purple-400"><i data-lucide="layers" class="w-5 h-5"></i></span>
+            <h3 class="text-lg font-bold text-white">Design & Software</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">Autodesk Fusion 360</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">KiCad 8 PCB Layout</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">C / C++20 / Python</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">OpenCV & YOLOv8</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-xs font-mono">PictoBlox / Quarky</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT / CTA FOOTER ================= -->
+  <footer id="contact" class="pt-20 pb-12 bg-[#050811] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex p-3 rounded-2xl bg-sky-500/10 border border-sky-500/20 mb-6">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8T3GTwmolRlNx0YGGE3D6jZ3reFDou_6Nw5hMs0ES_dx0aQfV3zpLnaoqpYEpK5R2Epps--Cqzx4QJj8ZOnZ2GUwRmXPA_lUZXueZRVHZvqg_8xZiEmYOsNJW-gx3_c0mVj_zZkreqynPwHffq-qQzXa5NvPS5xtyEb4l0j2P_8G3FBuxDagUM5v7WmUWGdeE6iynT-zbFD88dj-psmA0vsbc4Rj4S4eUNB-Wsb77xnFk7kGxIYvXDm5iX-FfhsAk2jg" alt="INNOV8IVE" class="h-14 w-auto object-contain" />
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          Ready to Architect Your Robotics Journey?
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg mt-4 max-w-2xl mx-auto">
+          Connect for institutional curriculum design, lab bench setups, deep-tech mentorship, or commercial R&D collaborations.
+        </p>
+
+        <!-- Direct Actions -->
+        <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
+          <a href="mailto:innovative.omji@gmail.com?subject=Robotics%20Collaboration%20Inquiry" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-mono font-bold text-sm transition-all shadow-xl shadow-sky-500/20 active:scale-95">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            <span>innovative.omji@gmail.com</span>
+          </a>
+          <button onclick="openCVModal()" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 font-mono text-sm transition-all hover:border-sky-400 active:scale-95">
+            <i data-lucide="file-text" class="w-4 h-4 text-sky-400"></i>
+            <span>Download Full CV (PDF)</span>
+          </button>
+        </div>
+
+        <!-- Social Icons Strip -->
+        <div class="flex items-center justify-center gap-6 mt-10">
+          <a href="https://linkedin.com" target="_blank" class="p-3 rounded-lg bg-slate-900 hover:bg-sky-500 hover:text-slate-950 text-slate-400 transition-all border border-slate-800" title="LinkedIn Profile">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+          </a>
+          <a href="https://github.com" target="_blank" class="p-3 rounded-lg bg-slate-900 hover:bg-sky-500 hover:text-slate-950 text-slate-400 transition-all border border-slate-800" title="GitHub Repositories">
+            <i data-lucide="github" class="w-5 h-5"></i>
+          </a>
+          <a href="mailto:innovative.omji@gmail.com" class="p-3 rounded-lg bg-slate-900 hover:bg-sky-500 hover:text-slate-950 text-slate-400 transition-all border border-slate-800" title="Direct Email">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank" class="p-3 rounded-lg bg-slate-900 hover:bg-orange-500 hover:text-white text-slate-400 transition-all border border-slate-800" title="Robotics Demos">
+            <i data-lucide="youtube" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Sub-bar -->
+      <div class="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
+        <p>© 2025 INNOV8IVE, BUILD IT. Developed by Om Ji Mishra.</p>
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> Lab Hardware Online</span>
+          <span>•</span>
+          <span class="text-sky-400">v4.8_PRODUCTION</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= DETAIL MODAL ================= -->
+  <div id="project-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="glass-card bg-slate-950 rounded-2xl max-w-2xl w-full p-6 sm:p-8 border border-slate-700 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <button onclick="closeModal()" class="absolute top-5 right-5 p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div id="modal-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CV / SYLLABUS MODAL ================= -->
+  <div id="cv-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="glass-card bg-slate-950 rounded-2xl max-w-md w-full p-6 sm:p-8 border border-slate-700 shadow-2xl relative text-center">
+      <button onclick="closeCVModal()" class="absolute top-5 right-5 p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div class="w-12 h-12 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20 flex items-center justify-center mx-auto mb-4">
+        <i data-lucide="file-check" class="w-6 h-6"></i>
+      </div>
+      <h3 class="text-xl font-bold text-white mb-2">Curriculum & CV Ready</h3>
+      <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+        The complete 6-Stage Robotics Engineering Syllabus & Om Ji Mishra's Professional Dossier are compiled and ready.
+      </p>
+      <div class="space-y-3">
+        <a href="mailto:innovative.omji@gmail.com?subject=Request%20Full%20Curriculum%20PDF%20and%20CV" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-mono font-bold text-sm transition-all shadow-lg shadow-sky-500/20">
+          <i data-lucide="download" class="w-4 h-4"></i> Request Institutional PDF
+        </a>
+        <button onclick="closeCVModal()" class="w-full py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-colors">
+          Dismiss
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SCRIPT LOGIC ================= -->
+  <script>
+    // Project Data Dictionary
+    const projectDetails = {
+      'esp32-serving': {
+        title: 'ESP32 Autonomous Serving Robot',
+        category: 'Robotics, IoT & Embedded Firmware',
+        tags: ['ESP32 Dual-Core', 'FreeRTOS', 'C++', 'WebSocket Dashboard', 'L298N Motor Driver'],
+        description: 'Designed and fabricated an autonomous indoor service robot capable of table delivery in cafeteria environments. Features an onboard web server hosted on the ESP32 allowing staff to click table numbers, triggering PID-guided motion with dual optical wheel encoders and dual ultrasonic safety obstacle interlocks.',
+        highlights: [
+          'Dual-core ESP32 managing real-time motor PID loops on Core 0 and WebSocket communications on Core 1.',
+          'Fail-safe obstacle detection stopping within 15ms of unexpected path obstruction.',
+          'Custom laser-cut acrylic chassis with integrated lithium iron phosphate battery management system.'
+        ]
+      },
+      'ros2-amr': {
+        title: 'ROS 2 & Gazebo Autonomous Mobile Robot (AMR)',
+        category: 'ROS 2 Middleware & SLAM',
+        tags: ['ROS 2 Humble', 'Nav2 Stack', 'Gazebo Ignition', 'RPLiDAR A1', 'Cartographer SLAM'],
+        description: 'Developed an industrial-grade differential drive Autonomous Mobile Robot within ROS 2 Humble. Integrated laser costmap inflation, global dynamic path planners, and automated recovery behaviors. Verified in 3D Gazebo physics simulations before deployment onto physical hardware with a Raspberry Pi 4 companion computer.',
+        highlights: [
+          'Full URDF mechanical joint definition with continuous velocity transmission limits.',
+          'Cartographer SLAM generating sub-3cm resolution 2D occupancy grid maps.',
+          'Nav2 action client scripts for autonomous multi-waypoint patrol loops.'
+        ]
+      },
+      'pictoblox-ai': {
+        title: 'PictoBlox AI & Computer Vision Curriculum Modules',
+        category: 'AI Education & Computer Vision',
+        tags: ['PictoBlox', 'OpenCV', 'TensorFlow Lite', 'Quarky Hardware', 'Python'],
+        description: 'Created comprehensive STEM pedagogical modules instructing young students on neural networks and computer vision. Integrated webcam feeds for real-time facial expression tracking, hand gesture control for robotic arms, and object classification sorting routines.',
+        highlights: [
+          'Hands-on visual machine learning modules accessible for ages 10 to 16.',
+          'Hardware-in-the-loop actuation triggering robotic gripper actions from detected video classes.',
+          'Adopted across multiple school robotics bootcamps with 2,000+ active learners.'
+        ]
+      },
+      'flight-controller': {
+        title: 'STM32 Custom Drone Flight Controller Board',
+        category: 'Avionics, Hardware & PCB Design',
+        tags: ['STM32F401', 'KiCad 8', 'I2C Gyro', 'SPI Flash', 'FreeRTOS'],
+        description: 'Designed a custom 4-layer flight computer PCB in KiCad featuring an STM32 ARM Cortex-M4 microcontroller. Wrote bare-metal register-level firmware implementing sensor calibration, complementary filtering, and quadcopter attitude rate PID loops at 400Hz.',
+        highlights: [
+          'MPU6050 6-DoF accelerometer/gyroscope sampling via high-speed DMA I2C channel.',
+          'Blackbox flight data recording to Winbond SPI NOR flash memory.',
+          'Dedicated low-noise LDO power distribution rails isolating motor inductive spikes.'
+        ]
+      },
+      'bionic-hand': {
+        title: '3D-Printed Bionic Robotic Hand',
+        category: 'Biomimetic Robotics & CAD',
+        tags: ['Fusion 360', 'Parametric CAD', 'Tendon Linkages', 'Flex Sensors', 'Arduino'],
+        description: 'Engineered an anthropomorphic 5-digit prosthetic hand designed for high dexterity and low weight. Features 3D-printed modular phalanges with elastic return ligaments and high-torque micro servomotors routed through internal tendon cable guides.',
+        highlights: [
+          'Compliant joint flexures modeled with parametric tolerances for FDM 3D printers.',
+          'Real-time wireless glove interface translating analog flex voltages into servo angles.',
+          'Capable of grasping fragile objects through tactile pressure sensor feedback.'
+        ]
+      },
+      'iot-weather': {
+        title: 'Solar IoT Weather Telemetry Station',
+        category: 'Connected Telemetry & Cloud',
+        tags: ['ESP32', 'Deep Sleep (15uA)', 'MQTT Broker', 'BME280', 'Solar MPPT'],
+        description: 'Built a rugged off-grid environmental sensor station deployed outdoors. The system samples barometric pressure, temperature, relative humidity, and rainfall rates, transmitting encrypted MQTT payloads over WiFi before re-entering ultra-low power deep sleep.',
+        highlights: [
+          'Optimized power circuitry achieving continuous year-round solar operation on a single 18650 cell.',
+          'Instant web telemetry visualization in Grafana and custom responsive dashboard.',
+          'Automated email and SMS alarms when precipitation or temperature thresholds are exceeded.'
+        ]
+      }
+    };
+
+    // Open Project Detail Modal
+    function openProjectModal(projectId) {
+      const data = projectDetails[projectId];
+      if (!data) return;
+
+      const content = document.getElementById('modal-content');
+      content.innerHTML = `
+        <div class="flex items-center gap-2 text-xs font-mono text-sky-400 uppercase mb-2">
+          <span>${data.category}</span>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-3">${data.title}</h3>
+        <p class="text-slate-300 text-sm leading-relaxed mb-5">${data.description}</p>
+        
+        <h4 class="text-xs font-mono text-orange-400 font-bold uppercase tracking-wider mb-2">Key Technical Achievements</h4>
+        <ul class="text-xs text-slate-300 font-mono space-y-2 mb-6">
+          ${data.highlights.map(h => `<li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0 mt-0.5"></i> <span>${h}</span></li>`).join('')}
+        </ul>
+
+        <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800 font-mono text-xs">
+          ${data.tags.map(t => `<span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">${t}</span>`).join('')}
+        </div>
+      `;
+
+      document.getElementById('project-modal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeModal() {
+      document.getElementById('project-modal').classList.add('hidden');
+    }
+
+    // CV Modal Handlers
+    function openCVModal() {
+      document.getElementById('cv-modal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+    function closeCVModal() {
+      document.getElementById('cv-modal').classList.add('hidden');
+    }
+
+    // Filter Experience Cards
+    function filterExperience(category) {
+      document.querySelectorAll('.exp-tab').forEach(tab => {
+        tab.className = "exp-tab px-3 py-1.5 rounded text-slate-400 hover:text-white transition-all";
+      });
+      document.getElementById(`exp-btn-${category}`).className = "exp-tab px-3 py-1.5 rounded bg-sky-500 text-slate-950 font-bold transition-all";
+
+      const cards = document.querySelectorAll('.exp-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Close modals when clicking outside container
+    window.addEventListener('click', (e) => {
+      const projModal = document.getElementById('project-modal');
+      const cvModal = document.getElementById('cv-modal');
+      if (e.target === projModal) closeModal();
+      if (e.target === cvModal) closeCVModal();
+    });
+
+    // Initialize Lucide Icons on load
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+    lucide.createIcons();
+  </script>
+</body>
+</html>
